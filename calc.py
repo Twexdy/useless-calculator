@@ -3,7 +3,7 @@ from tkinter import *
 # root configs
 root = Tk()
 root.title("world's worst calculator")
-root.iconbitmap("cacalculator.ico")
+root.iconbitmap("icon.ico")
 root.resizable(False,False)
 
 
@@ -20,7 +20,7 @@ def backspace():
     
 
 def clear():
-    numberDisplay.delete(END, END)
+    numberDisplay.delete(0, END)
     
 
 def equalFunction():
