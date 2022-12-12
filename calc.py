@@ -10,7 +10,7 @@ root.resizable(False,False)
 # functions
 def addItem(item):
      current = numberDisplay.get()
-     numberDisplay.delete(0, END)
+     clear()
      numberDisplay.insert(0, f"{current}{item}")
 
 
@@ -26,10 +26,10 @@ def clear():
 def equalFunction():
     try:
         result = eval(numberDisplay.get())
-        numberDisplay.delete(0, END)
+        clear()
         numberDisplay.insert(0, result)
     except:
-        numberDisplay.delete(0, END)
+        clear()
         numberDisplay.insert(0, "Error. Press 'clear'")
 
 
