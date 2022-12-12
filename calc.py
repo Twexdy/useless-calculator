@@ -11,9 +11,7 @@ errorMessage = "Invalid operation. Press clear"
 
 # functions
 def addItem(item):
-     current = numberDisplay.get()
-     clear()
-     numberDisplay.insert(0, f"{current}{item}")
+     numberDisplay.insert(END, item)
 
 
 def backspace():
