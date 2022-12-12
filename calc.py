@@ -1,28 +1,27 @@
 from tkinter import *
 
+# change these to whatever youd like
+errorMessage = "Invalid operation. Press clear" 
+windowTitle = "World's worst calculator"
+iconPath = "icon.ico"
+
 # root configs
 root = Tk()
-root.title("world's worst calculator")
-root.iconbitmap("icon.ico")
+root.title(windowTitle)
+root.iconbitmap(iconPath)
 root.resizable(False,False)
-
-errorMessage = "Invalid operation. Press clear" 
 
 
 # functions
 def addItem(item):
      numberDisplay.insert(END, item)
 
-
 def backspace():
-     current = numberDisplay.get()
-     numberDisplay.delete(len(current) - 1, END)
+     numberDisplay.delete(len(numberDisplay.get()) - 1, END)
     
-
 def clear():
     numberDisplay.delete(0, END)
     
-
 def equalFunction():
     try:
         result = eval(numberDisplay.get())
