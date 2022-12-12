@@ -6,6 +6,8 @@ root.title("world's worst calculator")
 root.iconbitmap("icon.ico")
 root.resizable(False,False)
 
+errorMessage = "Invalid operation. Press clear" 
+
 
 # functions
 def addItem(item):
@@ -30,8 +32,7 @@ def equalFunction():
         numberDisplay.insert(0, result)
     except:
         clear()
-        numberDisplay.insert(0, "Error. Press 'clear'")
-
+        numberDisplay.insert(0, errorMessage)
 
 # number bar
 numberDisplay = Entry(root, width=25, borderwidth=5, font=20)
